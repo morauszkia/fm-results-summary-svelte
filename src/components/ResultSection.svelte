@@ -1,7 +1,11 @@
+<script>
+  let { average } = $props();
+</script>
+
 <section>
   <h1>Your Result</h1>
   <p class="average--text">
-    <span class="average--value">76</span> <span>of 100</span>
+    <span class="average--value">{average}</span> <span>of 100</span>
   </p>
   <div>
     <p class="evaluation">Great</p>

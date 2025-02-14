@@ -1,10 +1,12 @@
 <script>
   import ResultsList from "./ResultsList.svelte";
+
+  let { results } = $props();
 </script>
 
 <section>
   <h2>Summary</h2>
-  <ResultsList />
+  <ResultsList {results} />
   <button>Continue</button>
 </section>
 

@@ -1,14 +1,18 @@
 <script>
   import ResultsListItem from "./ResultsListItem.svelte";
+
+  let { results } = $props();
 </script>
 
 <ul>
-  <ResultsListItem
-    className="reaction"
-    category="Reaction"
-    iconPath="icon-reaction.svg"
-    score="80"
-  />
+  {#each results as result}
+    <ResultsListItem
+      className={result.category.toLowerCase()}
+      category={result.category}
+      iconPath={result.icon}
+      score={result.score}
+    />
+  {/each}
 </ul>
 
 <style>

@@ -1,11 +1,17 @@
 <script>
   import DetailsSection from "./DetailsSection.svelte";
   import ResultSection from "./ResultSection.svelte";
+
+  import jsonData from "../data/data.json";
+
+  const average = Math.round(
+    jsonData.reduce((sum, next) => sum + next.score, 0) / jsonData.length
+  );
 </script>
 
 <main>
-  <ResultSection />
-  <DetailsSection />
+  <ResultSection {average} />
+  <DetailsSection results={jsonData} />
 </main>
 
 <style>
