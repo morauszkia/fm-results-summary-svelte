@@ -31,6 +31,10 @@
 
 :root {
   --bg-color: #ecf2ff;
+  --fs-sm: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.5rem;
+  --fs-xl: 3.5rem;
 }
 
 body {
@@ -43,4 +47,22 @@ body {
   height: 100dvh;
   background-color: var(--bg-color);
   position: relative;
+}
+
+@media screen and (min-width: 32rem) {
+  #app {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  :root {
+    --fs-sm: 1.125rem;
+    --fs-md: 1.5rem;
+    --fs-lg: 2rem;
+    --fs-xl: 4.5rem;
+  }
 }
