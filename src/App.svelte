@@ -3,10 +3,8 @@
   import SummaryContainer from "./components/SummaryContainer.svelte";
 </script>
 
-<main>
-  <SummaryContainer />
-  <Attribution />
-</main>
+<SummaryContainer />
+<Attribution />
 
 <style>
 </style>
